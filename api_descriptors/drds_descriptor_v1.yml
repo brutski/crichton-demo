@@ -180,7 +180,7 @@ descriptors:
             type: semantic
             href: drd/update/update-drd # Indicates that this should dereference update-drd
             links:
-              self: alps_base/DRDs#drd/create/create-drd
+              self: alps_base/DRDs#create
               help: documentation_base/Forms/create-drd
             descriptors:
               form-name:
@@ -277,7 +277,7 @@ descriptors:
           update-drd:
             type: semantic
             links:
-              self: alps_base/DRDs#drd/update/update-drd  
+              self: alps_base/DRDs#update
               help: documentation_base/Forms/update-drd
             descriptors:
               form-status:
