@@ -277,7 +277,7 @@ descriptors:
           update-drd:
             type: semantic
             links:
-              self: alps_base/DRDs#update
+              self: alps_base/DRDs#update-drd
               help: documentation_base/Forms/update-drd
             descriptors:
               form-status:
