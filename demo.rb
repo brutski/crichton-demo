@@ -14,7 +14,7 @@ def launch(output, type = :html)
   else
     pretty_xml(output, file)
   end
-  file. close
+  file.close
   
   Launchy.open(output_file) do |exception|
     puts "Attempted to open #{uri} and failed because #{exception}"
@@ -26,7 +26,7 @@ def drds_descriptor
 end
 
 def show_alps
-  launch(drds_descriptor.to_xml, :xml)
+  launch(Crichton.raw_registry['drds'].parent_descriptor.to_xml, :xml)
 end
 
 private
