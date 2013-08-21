@@ -29,6 +29,10 @@ def show_alps
   launch(Crichton.raw_registry['drds'].parent_descriptor.to_xml, :xml)
 end
 
+def show_dereferenced_alps
+  launch(Crichton.registry['drds'].parent_descriptor.to_xml, :xml)
+end
+
 private
 def pretty_xml(output, file)
   require "rexml/document"
@@ -42,3 +46,5 @@ def pretty_xml(output, file)
   formatter.compact = true
   formatter.write(doc, file)
 end
+
+#Crichton::logger = Logger.new(STDOUT)

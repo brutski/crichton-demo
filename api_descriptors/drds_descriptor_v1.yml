@@ -13,7 +13,7 @@ id: DRDs
 version: v1.0.0
 doc: Describes the semantics, states and state transitions associated with DRDs.
 links:
-  self: alps_base/DRDs
+  self: DRDs
   help: documentation_base/Things/DRDs
  
 # This section associates a simple state-machine DSL with the particular resource. It shows
@@ -178,7 +178,7 @@ descriptors:
         descriptors:
           create-drd:
             type: semantic
-            href: drd/update/update-drd # Indicates that this should dereference update-drd
+            href: update-drd # Indicates that this should dereference update-drd
             links:
               self: alps_base/DRDs#create-drd
               help: documentation_base/Forms/create-drd
@@ -200,7 +200,13 @@ descriptors:
                 enum:
                   href: http://alps.io.example.org/Leviathans#list
                 validators:
-                  - presence     
+                  - presence
+      junk-drd:
+        type: semantic
+        href: http://127.0.0.1/AlpsProfiles/testdata_alps.xml#create-testdata
+      junk:
+        type: semantic
+        href: JUNK#create
   drd:
     doc: |
       Diagnostic Repair Drones or DRDs are small robots that move around Leviathans. They are
