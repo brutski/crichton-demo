@@ -22,15 +22,15 @@ def launch(output, type = :html)
 end
 
 def drds_descriptor
-  Crichton.registry['drds'].parent_descriptor
+  Crichton.descriptor_registry['drds'].parent_descriptor
 end
 
 def show_alps
-  launch(Crichton.raw_registry['drds'].parent_descriptor.to_xml, :xml)
+  launch(Crichton.raw_descriptor_registry['drds'].parent_descriptor.to_xml, :xml)
 end
 
 def show_dereferenced_alps
-  launch(Crichton.registry['drds'].parent_descriptor.to_xml, :xml)
+  launch(Crichton.descriptor_registry['drds'].parent_descriptor.to_xml, :xml)
 end
 
 private
