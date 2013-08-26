@@ -86,12 +86,12 @@ states:
         leviathan-link:
           name: leviathan
           next:
-            - location: http://alps.io/schema.org/Leviathans#leviathan
+            - location: Leviathans#leviathan
         repair-history:
           conditions:
             - can_repair
           next:
-            - location: http://alps.io/schema.org/Repais#history
+            - location: Repairs#history
     deactivated:
       doc: The DRD is shut down.
       transitions:
@@ -122,7 +122,7 @@ states:
         leviathan-link:
           name: leviathan
           next:
-            - location: http://alps.io/schema.org/Leviathans#leviathan
+            - location: Leviathans#leviathan
     deleted:
       doc: The DRD is now free-floating in space.
       location: exit
@@ -198,15 +198,12 @@ descriptors:
                 href: http://alps.io/schema.org/Text
                 field_type: select
                 enum:
-                  href: http://alps.io.example.org/Leviathans#list
+                  href: Leviathans#list
                 validators:
                   - presence
-      junk-drd:
+      external-example:
         type: semantic
-        href: http://127.0.0.1/AlpsProfiles/testdata_alps.xml#create-testdata
-      junk:
-        type: semantic
-        href: JUNK#create
+        href: EXTERNAL_EXAMPLE#create
   drd:
     doc: |
       Diagnostic Repair Drones or DRDs are small robots that move around Leviathans. They are
@@ -270,12 +267,12 @@ descriptors:
         doc: A reference to the Leviathan the DRD works on.
         type: safe
         embed: true
-        rt: http://alps.io/schema.org/Leviathan#leviathan
+        rt: Leviathan#leviathan
       repair-history:
         doc: A reference to the list of historical repairs performed.
         type: safe
         embed: true
-        rt: http://alps.io/schema.org/Repairs#history
+        rt: Repairs#history
       update:
         doc: Updates a DRD.
         type: idempotent
